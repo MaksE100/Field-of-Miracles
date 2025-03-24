@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>5 задание - Поле чудес</title>
+	<style type="text/css">
+		/* Главный див */
+		.container {
+			width: 600px;
+		}
+		/* класс для правильной буквы 1 */
+		.letter1 {
+			background: black;
+			border: 1px solid #dee2e6;
+			height: 100px;
+			width: 100px;
+		}
+		/* класс для правильной буквы 2 */
+		.letter2 {
+			background: black;
+			border: 1px solid #dee2e6;
+			height: 100px;
+			width: 100px;
+		}
+		/* класс для правильной буквы 3 */
+		.letter3 {
+			background: black;
+			border: 1px solid #dee2e6;
+			height: 100px;
+			width: 100px;
+		}
+		/* класс для правильной буквы 4 */
+		.letter4 {
+			background: black;
+			border: 1px solid #dee2e6;
+			height: 100px;
+			width: 100px;
+		}
+		/* класс для правильной буквы 5 */
+		.letter5 {
+			background: black;
+			border: 1px solid #dee2e6;
+			height: 100px;
+			width: 100px;
+		}
+		/* класс для правильной буквы 6 */
+		.letter6 {
+			background: black;
+			border: 1px solid #dee2e6;
+			height: 100px;
+			width: 100px;
+		}
+		/* авт. отступы */
+		.mx-auto {
+			margin-left: auto;
+			margin-right: auto;
+		}
+		/* DISPLAY FLEX */
+		.d-flex {
+			display: flex;
+		}
+		/* ШРИФТ Arial */
+		.ff-arial {
+			font-family: Arial;
+		}
+		/* фон светло-серый, почти белый */
+		.bg-light {
+			background-color: #f8f9fa;
+		}
+		/* фон желтый */
+		.bg-warning {
+			background-color: #ffc107;
+		}
+		/* ведущий Якубович */
+		.yakubovich {
+			background-image: url(1.png);
+			background-size: 100% 100%;
+			width: 400px;
+			height: 400px;
+			position: absolute;
+			left: 0px;
+			top: 400px;
+		}
+	</style>
+</head>
+<body class="ff-arial">
+	<!-- Вопрос -->
+	<div class="bg-warning container mx-auto">
+		Этот струнный инструмент используют во многих стилях и направлениях музыки. Значительный вклад в музыкальную индустрию этот инструмент внес к середине 20 века.
+	</div>
+	<!-- Главный див -->
+	<div class="container mx-auto d-flex bg-light">
+		<div class="letter1">
+			<h1>Г</h1>
+		</div>
+		<div class="letter2">
+			<h1>И</h1>
+		</div>
+		<div class="letter3">
+			<h1>Т</h1>
+		</div>
+		<div class="letter4">
+			<h1>А</h1>
+		</div>
+		<div class="letter5">
+			<h1>Р</h1>
+		</div>
+		<div class="letter6">
+			<h1>А</h1>
+		</div>
+	</div>
+	<!-- Добавьте классы для букв сами -->
+	<span class="CeA">A</span>
+	<span class="CeB">Б</span>
+	<span class="N">В</span>
+	<span class="CeG">Г</span>
+	<span class="N">Д</span>		
+	<span class="N">Е</span>	
+	<span class="N">Ё</span>
+	<span >Ж</span>
+	<span class="N">З</span>
+	<span class="CeN">И</span>
+	<span class="N">Й</span>
+	<span class="N">К</span>
+	<span class="N">Л</span>
+	<span class="N">М</span>
+	<span class="N">Н</span>
+	<span class="N">О</span>
+	<span class="N">П</span>
+	<span class="CeR">Р</span>
+	<span class="N">С</span>
+	<span class="CeT">Т</span>
+	<span class="N">У</span>
+	<span class="N">Ф</span>
+	<span class="N">Х</span>
+	<span class="N">Ц</span>
+	<span class="N">Ч</span>
+	<span class="N">Ш</span>
+	<span class="N">Щ</span>
+	<span class="N">Ъ</span>
+	<span class="N">Ы</span>
+	<span class="N">Ь</span>
+	<span class="N">Э</span>
+	<span class="N">Ю</span>
+	<span class="N">Я</span>
+	<!-- ведущий -->
+	<div class="yakubovich">
+	</div>
+	<script type="text/javascript">
+		document.querySelector(".CeG").onclick = function(){
+			document.querySelector(".letter1").style.background = 'yellow';
+		}
+		document.querySelector(".CeN").onclick = function(){
+			document.querySelector(".letter2").style.background = 'yellow';
+		}
+		document.querySelector(".CeT").onclick = function(){
+			document.querySelector(".letter3").style.background = 'yellow';
+		}
+		document.querySelector(".CeA").onclick = function(){
+			document.querySelector(".letter4").style.background = 'yellow';
+			document.querySelector(".letter6").style.background = 'yellow';
+		}
+		document.querySelector(".CeR").onclick = function(){
+			document.querySelector(".letter5").style.background = 'yellow';
+		}
+		let error = document.querySelectorAll(".N")
+
+			for(let i=0; i<5; i=i+1){
+				error[i].onclick = function(){
+					alert("Не правильно")	
+				}
+			}
+		/* Создай игру "Поле чудес".
+		1. Когда кликаешь на правильную букву алфавита, то открывается буква в слове.
+		2. Когда кликаешь на неправильную букву алфавита, то выходит всплывающее окно 'Неверно!'.
+		Вначале сделай, так чтобы работали клики на правильные буквы. Потом сделай, так чтобы работали клики на 1-2 неправильные буквы. На все 33 буквы алфавита, можно не делать. */
+	</script>
+</body>
+</html>
